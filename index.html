@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Enrollment Management System</h1>
+        <p>Manage student enrollment details easily</p>
+    </header>
+
+    <div class="container">
+
+        <section class="form-section">
+            <h2>Student Enrollment Form</h2>
+
+            <form id="studentForm">
+
+                <label>Student Name</label>
+                <input type="text" id="name" placeholder="Enter student name" required>
+
+                <label>Register Number</label>
+                <input type="text" id="registerNo" placeholder="Enter register number" required>
+
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter email" required>
+
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+                <label>Course</label>
+                <select id="course" required>
+                    <option value="">Select Course</option>
+                    <option value="B.Sc Computer Science">B.Sc Computer Science</option>
+                    <option value="BCA">BCA</option>
+                    <option value="B.Com">B.Com</option>
+                    <option value="BBA">BBA</option>
+                    <option value="B.A English">B.A English</option>
+                </select>
+
+                <label>Year</label>
+                <select id="year" required>
+                    <option value="">Select Year</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                </select>
+
+                <label>Date of Birth</label>
+                <input type="date" id="dob" required>
+
+                <button type="submit">Enroll Student</button>
+
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Enrolled Students</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search by name or register number..."
+                onkeyup="searchStudents()"
+            >
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Register No</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Course</th>
+                        <th>Year</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable">
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
